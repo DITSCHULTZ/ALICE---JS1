@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Menukort - Februar</title>
+</head>
+<body>
+  <!-- content -->
+
+  <!-- Med inspiration fra https://www.w3schools.com/howto/howto_js_collapse_sidebar.asp-->
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="menu.html">MENU</a>
+    <a href="#">TAKE AWAY</a>
+    <a href="index.html#restauranten">RESTAURANTEN</a>
+    <a href="#">ARRANGEMENTER</a>
+    <a href="#">CATERING</a>
+    <a class="book" href="booking.html">BOOK BORD</a>
+  </div>
+
+  <div id="main">
+    <button class="openbtn" onclick="openNav()">&#9776;</button>
+  </div>
+
+  <header>
+  <h1><a href="index.html"> Alices Restaurant</a></h1>
+  <h4> Est. 2010</h4>
+  </header>
+
+  <h1 class="menu">Vores Februar Menu</h1>
+<div id="resultat"></div>
+
+<script>
+
+
+// nu skal vi bruge vores JSON
+menu = `{
+ "menu": [
+   {
+     "id": 1,
+     "titel": "Kulmule",
+     "beskrivelse": "Smørstegt kulmule med grillede æbler og porrer, toppet med citronmelisse.",
+     "pris": "125",
+     "ret": "forret",
+     "foto": "fisk.jpg"
+   },
+   {
+     "id": 2,
+     "titel": "Tatar",
+     "beskrivelse": "Rørt oksetatar med mayo på trøffel, med syltede rødløg og sprøde jordskokke crisps.",
+     "pris": "125",
+     "ret": "forret",
+     "foto": "tatar.jpg"
+   },
+   {
+     "id": 3,
+     "titel": "Palmekål",
+     "beskrivelse": "Grillet palmekål med grillede løg, syltede svampe og vinagrette på chili og sesam.",
+     "pris": "140",
+     "ret": "hovedret",
+     "foto": "kyll.jpg"
+   },
+   {
+     "titel": "Svinekæber",
+     "beskrivelse": "Braiserede svinekæber med østers- og kejserhatte, hertil puré på pastinak og timian.",
+     "pris": "175",
+     "ret": "hovedret",
+     "foto": "svin.jpg"
+   },
+   {
+     "id": 5,
+     "titel": "Pavlova",
+     "beskrivelse": "Sprød marengs med vanilje/hindbærskum, dækket med syltede bær og brændt hvid chokolade.",
+     "pris": "75",
+     "ret": "dessert",
+     "foto": "cb.jpg"
+   },
+   {
+     "id": 6,
+     "titel": "Panna cotta",
+     "beskrivelse": "Karamel panna cotta med mokkacreme",
+     "pris": "75",
+     "ret": "dessert",
+     "foto": "efelkaach.jpg"
+   },
+   {
+     "id": 7,
+     "titel": "Brød",
+     "beskrivelse": "Surdejsbrød med havsalt og sesam, dertil urtesmør",
+     "pris": "40",
+     "ret": "tilbehør",
+     "foto": "broed.jpg"
+   },
+   {
+     "id": 8,
+     "titel": "Appetizer",
+     "beskrivelse": "Snackbræt med landskinke, bresaola, Vesterhavsost, sicillienske oliven og surdejsbrød",
+     "pris": "80",
+     "ret": "tilbehør",
+     "foto": "broed.jpg"
+   }
+ ]
+}`;
+
+const xxx = JSON.parse(menu);
+ console.log( xxx.menu[1].titel )
+
+ // loop der henter hele arrayet
+  for (let i=0; i<xxx.menu.length; i++){
+
+
+    if( xxx.menu[i].ret == 'forret', 'hovedret', 'dessert' ){
+
+    // console.log( xxx.menu[i].titel )
+    resultat.innerHTML += `
+      <div class="menuTing flex">
+        <h2 style="font-size: 2.3rem;"> ${xxx.menu[i].titel} </h2>
+        <p style="color: #b4b1bc;"> ${xxx.menu[i].beskrivelse} </p>
+        <p class="pris"> ${xxx.menu[i].pris} kr. </p>
+        <img class="menuFoto" src="images/${xxx.menu[i].foto}">
+      </div>
+    `
+    }
+  }
+
+</script>
+
+</body>
+</html>

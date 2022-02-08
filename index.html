@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Alices Restaurant</title>
+</head>
+<body>
+  <!-- content -->
+
+  <!-- Med inspiration fra https://www.w3schools.com/howto/howto_js_collapse_sidebar.asp-->
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="menu.html">MENU</a>
+    <a href="#">TAKE AWAY</a>
+    <a href="index.html#restauranten">RESTAURANTEN</a>
+    <a href="#">ARRANGEMENTER</a>
+    <a href="#">CATERING</a>
+    <a class="book" href="booking.html">BOOK BORD</a>
+  </div>
+
+  <div id="main">
+    <button class="openbtn" onclick="openNav()">&#9776;</button>
+  </div>
+
+<header>
+  <h1><a href="index.html"> Alices Restaurant</a></h1>
+  <h4> Est. 2010</h4>
+  </header>
+
+  <div id="billede">
+    <img class="billedeStor" src=./images/lasagne.jpg alt="lasagne">
+    <img class="billedeLille" src=./images/lasagneS.jpg alt="lasagne">
+  </div>
+
+  <h2 id="restauranten" class="content">Hvem er vi?</h2>
+
+  <article id="content">Vi er en restaurant i hjertet af Latinerkvarteret i Århus.
+Vores mål har altid været at servere fremragende og billig mad af gode råvarer fra grønttorvet. Vi
+elsker mad og at kunne lave dette kvalitetsbevidst til en overkommelig pris.
+<br>
+<br>
+Vi er i år blevet nomineret til og er medlem af den internationalt kendte gastronomiske orden Chaine des Rotiseurs.
+Vi gør altid vores bedste, for at levere det bedste produkt til, så hvis du ikke har spist hos os endnu,
+så book bord i dag.
+  </article>
+
+  <div id="bookKnap">
+    <a class="book" href="booking.html">BOOK BORD</a>
+  </div>
+
+
+<div id="personaleflex">
+  <section class="personalefoto">
+    <img src="images/personale.jpg" alt="køkken">
+  </section>
+  <section class="personale">
+       <h2>Mød vores skønne personale</h2>
+       <div id="personale"></div>
+     </section>
+
+   </div>
+
+<div id="citat"></div>
+
+
+ <!-- Video -->
+
+ <h2>Here's the play when visible part</h2>
+    <!-- end slipsum code -->
+    <div id="synlig">
+         <div id="ytplayer"></div>
+    </div>
+
+
+<!--Footer-->
+<footer>
+<p>&copy; Ditte Schultz Petersen</p>
+<p id="footer"></p>
+
+<div id="adresse">
+<button onclick="myFunction()">Find os</button>
+</div>
+
+</footer>
+
+  <!-- scripts -->
+  <script src="js/js.js"></script>
+
+</body>
+</html>

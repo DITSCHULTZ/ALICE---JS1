@@ -1,0 +1,394 @@
+/*Fonte*/
+
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+
+/**
+ * file: style.css
+ * purpose: styles, animation etc
+ * further development: meyer reset perhaps?
+ **/
+/*CSS Reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* font-family: 'Fredericka the Great', cursive;*/
+:root {
+  --kalk: 'Fredericka the Great', cursive;
+
+  --grey: #b4b1bc;
+}
+
+
+body {
+  background-color: #3b3942;
+}
+
+h2, p, #citat{
+    color: #b4b1bc;
+}
+
+
+/* The sidebar menu -- Med inspiration fra https://www.w3schools.com/howto/howto_js_collapse_sidebar.asp */
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  font-size: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s; /* If you want a transition effect */
+  padding: 20px;
+
+}
+
+
+
+.book {
+  border: 1px solid grey;
+  text-decoration: none;
+  color: #b4b1bc;
+}
+
+header {
+  border-radius: 50%;
+  width: 190px;
+  height: 100px;
+  padding: 40px;
+  margin-left: 40%;
+
+  background: #f2eceb;
+  border: 2px solid pink;
+  text-align: center;
+  font-family: Abril Fatface, sans-serif;
+
+}
+
+
+header h1, a{
+  font-size: 2rem;
+  color: hotpink;
+}
+
+header a {
+text-decoration: none;
+}
+
+header h4{
+  color:darkgrey;
+
+}
+#billede {
+  padding-top: 2%;
+}
+
+
+.content {
+  padding-top: 10%;
+  font-family: 'Fredericka the Great', cursive;
+  text-align: center;
+  font-size: 4rem;
+
+}
+
+#content {
+  text-align: center;
+  color: #b4b1bc;
+  font-size: 1.4rem;
+  padding-bottom: 8rem;
+  padding-top: 2rem;
+  margin: 0 20%;
+  line-height: 2;
+}
+
+/*Book bord knap*/
+#bookKnap {
+  font-family: var(--kalk);
+  color: #b4b1bc;
+  text-align: center;
+  padding-bottom: 13%;
+}
+
+#bookKnap .book {
+  font-size: 3.5rem;
+}
+
+
+/* introflexbox */
+
+#personaleflex{
+  display: inline-flex;
+  width:100%;
+  padding-bottom: 18%;
+}
+
+.personalefoto {
+  flex:60%;
+  margin: 10px;
+}
+
+.personale {
+  flex:40%;
+  margin: 10px;
+  padding-top: 2%;
+  padding-left: 5%;
+}
+
+#personale {
+    color: #b4b1bc;
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+.personalefoto img {
+  width: 80%;
+  padding-left: 15%;
+}
+
+
+.personale h2{
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  font-family: 'Fredericka the Great', cursive;
+}
+
+
+#citat {
+  font-size: 3.5rem;
+  text-align: center;
+  font-family: 'Fredericka the Great', cursive;
+  padding: 0 15% 10% 15%;
+  line-height: 1.7;
+}
+
+
+/*Book bord*/
+.booking {
+  font-family: var(--kalk);
+  font-size: 3.5rem;
+  text-align: center;
+  padding: 5% 0;
+}
+
+#bookingForm {
+  font-size: 2rem;
+  color: #b4b1bc;
+  text-align: center;
+}
+
+#bookingForm legend {
+  font-size: 2.3rem;
+  font-family: var(--kalk);
+  padding: 3% 0 ;
+}
+
+label {
+  font-size: 1.2rem;
+}
+
+.videre {
+  background-color: black;
+  padding: 10px;
+  text-align: center;
+  margin: 5% 35%;
+  border-radius: 15px;
+}
+
+
+/* Booking foto flex */
+
+#bookingFlex{
+  display: inline-flex;
+  width:90%;
+  margin: 6%;;
+  column-gap: 5%;
+}
+
+.bookfFoto {
+  flex:30%;
+}
+
+.bookFoto2 {
+  flex:40%;
+  padding-top: 20%;
+}
+.bookFoto2 img {
+  width: 80%;
+}
+
+/*Menu*/
+.menu {
+	font-family: var(--kalk);
+	color: var(--grey);
+	font-size: 3.5rem;
+	text-align: center;
+	padding: 5% 0;
+}
+
+#resultat {
+	text-align: center;
+	color: var(--grey);
+}
+
+#resultat h2 {
+	font-family: var(--kalk);
+}
+
+#resultat p {
+	font-size: 2rem;
+	color: var(--grey);
+	padding: 3% 15%;
+}
+
+#resultat .pris {
+	font-size: 1.5rem;
+}
+
+#resultat .menuFoto {
+	width: 30%;
+	padding-bottom: 5%;
+}
+
+
+/*FOOTER*/
+
+
+footer, p {
+  padding-top: 3%;
+  margin: 0 5%;
+  color: black;
+}
+
+footer, #adresse{
+  background-color: beige;
+  padding-bottom: 8%;
+}
+
+/*MEDIA RULEs*/
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+
+  /*SIDEBAR*/
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+
+
+}
+
+/* Extra small devices (phones, 768px and down) */
+@media only screen and (max-width: 768px) {
+  header {
+    margin-left: 20%;
+  }
+
+
+  .billedeLille {
+    display: block;
+    width:112vw;
+    padding-top: 10%;
+  }
+  .billedeStor {
+    display: none;
+  }
+
+  #content {
+    margin: 0 10%;
+  }
+
+  #bookKnap .book {
+    font-size: 2.5rem;
+  }
+
+  #personaleflex {
+    flex-wrap: wrap;
+  }
+  .personale {
+    text-align: center;
+  }
+  #citat {
+    font-size: 2rem;
+    padding: 5%;
+  }
+}
+
+
+/* Small devices (portrait tablets and large phones, 769px and up) */
+@media only screen and (min-width: 769px) {
+  .billedeLille {
+    display: none;
+  }
+  .billedeStor {
+    display: block;
+    width:100%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .billedeStor {
+    height: 650px;;
+  }
+}

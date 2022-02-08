@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Booking - Alices Restaurant</title>
+</head>
+
+<body>
+  <!-- Med inspiration fra https://www.w3schools.com/howto/howto_js_collapse_sidebar.asp-->
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="menu.html">MENU</a>
+    <a href="#">TAKE AWAY</a>
+    <a href="index.html#restauranten">RESTAURANTEN</a>
+    <a href="#">ARRANGEMENTER</a>
+    <a href="#">CATERING</a>
+    <a class="book" href="booking.html">BOOK BORD</a>
+  </div>
+
+  <div id="main">
+    <button class="openbtn" onclick="openNav()">&#9776;</button>
+  </div>
+
+<header>
+  <h1><a href="index.html"> Alices Restaurant</a></h1>
+  <h4> Est. 2010</h4>
+  </header>
+
+  <h2 class="booking">Book bord</h2>
+
+<section id="bookingForm">
+  <form id="contact" action="action.html" method="post">
+
+      <fieldset id="f1">
+        <legend>Skriv navn og email</legend>
+        Navn <input type="text" name="Name" value=""><br>
+        Email <input type="email" value="">
+
+        <div id="btn1" class="videre">Næste</div>
+      </fieldset>
+
+      <fieldset id="f2">
+        <legend>Vælg dato</legend>
+        Dato <input type="date" id="start" name="trip-start"
+       value="2018-07-22"
+       min="2018-01-01" max="2018-12-31"> <br>
+       Tid <input type="time" id="appt" name="appt"
+       min="11:00" max="23:00" required> <br>
+       <br>
+
+<small>Vi har åbent fra 11-23</small> <br>
+<br>
+
+        <div id="btn2" class="videre">Næste</div>
+      </fieldset>
+
+      <fieldset id="f3">
+        <legend>Hvor mange gæster?</legend>
+        Antal gæster <input type="number" id="quantity" name="quantity" min="1" max="12"> <br>
+        <label for="quantity">Hvis flere end 12 gæster, ring til os på 22 22 22 22 eller gå til Arrangementer</label> <br>
+        <br>
+
+        <div id="btn3" class="videre">Næste</div>
+      </fieldset>
+
+      <fieldset id="f4">
+        <H2>Sådan - nu kan du maile denne form</H2>
+
+        <!-- submit-knappen sender formens indhold til serveren -->
+        <input type="submit">
+      </fieldset>
+    </form>
+    </section>
+
+    <div id="bookingFlex">
+      <section class="bookFoto">
+        <img src="images/vin.jpg" alt="Vin">
+      </section>
+      <section class="bookFoto2">
+        <img src="images/krukke.jpg" alt="Krukker">
+         </section>
+
+       </div>
+
+
+
+  <div id="citat"></div>
+
+  <!--Footer-->
+  <footer>
+  <p>&copy; Ditte Schultz Petersen</p>
+  <p id="footer"></p>
+
+  <div id="adresse">
+  <button onclick="myFunction()">Find os</button>
+  </div>
+
+  </footer>
+    <!-- scripts -->
+    <script src="js/form.js"></script>
+
+</body>
+</html>
